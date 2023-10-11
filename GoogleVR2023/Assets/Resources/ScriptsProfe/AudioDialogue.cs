@@ -12,7 +12,6 @@ using UnityEngine.XR.LegacyInputHelpers;
 public class AudioDialogue : MonoBehaviour
 {
     public AudioSource audioHello, audioGoodbye;
-    public GameObject madHatterCat;
     private Boolean audioHelloWasPlayed = false;
     private Animator animator;
 
@@ -54,7 +53,7 @@ public class AudioDialogue : MonoBehaviour
         Debug.Log("Good-bye mad hatter");
         audioGoodbye.Play();
         yield return new WaitUntil(()=>audioGoodbye.isPlaying == false);
-        madHatterCat.SetActive(false);
+        audioHelloWasPlayed = false;
     }   
 
 }
