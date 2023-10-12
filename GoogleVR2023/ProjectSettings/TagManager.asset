@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - WayPoint
+  - Cat
+  - Goal
   layers:
   - Default
   - TransparentFX

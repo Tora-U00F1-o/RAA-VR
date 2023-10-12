@@ -43,7 +43,6 @@ public class WayPointCharacter : MonoBehaviour
         
         if (hit.gameObject.CompareTag("WayPoint"))
         {
-            Debug.Log("Colision con waypoint");
             target = hit.gameObject.GetComponent<WayPoint>().nextWayPoint;
         }
        

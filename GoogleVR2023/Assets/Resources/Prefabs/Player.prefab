@@ -108,6 +108,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4621699890340798055}
   - component: {fileID: 4621699890340798054}
+  - component: {fileID: 5203491072789799927}
+  - component: {fileID: 6265448107523527704}
+  - component: {fileID: 6550371898248771201}
   - component: {fileID: 4621699890340798052}
   - component: {fileID: 4621699890340798053}
   - component: {fileID: 4621699890340798074}
@@ -151,7 +154,7 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4621699890340798052
+--- !u!114 &5203491072789799927
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,6 +163,57 @@ MonoBehaviour:
   m_GameObject: {fileID: 4621699890340798049}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe943c5273c51864c8b209b18e570bed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPC1Tag: 
+  NPC2Tag: 
+  NPC1Conversation: {fileID: 0}
+  NPC2Conversation: {fileID: 0}
+  NPC1: {fileID: 0}
+--- !u!114 &6265448107523527704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4621699890340798049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 203a011f47ccc014abff173435a0b4e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NPC1Tag: 
+  NPC2Tag: 
+  NPC1Conversation: {fileID: 0}
+  NPC2Conversation: {fileID: 0}
+--- !u!114 &6550371898248771201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4621699890340798049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43e50f0783cbf2a48a8b7a0730afcdf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 4621699890340798054}
+  speed: 8
+  gravity: -9.81
+  jumpHeight: 2
+  goal: 
+  nextScene: MenuVR
+--- !u!114 &4621699890340798052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4621699890340798049}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0c33603cbff14d56be2261488b8f745, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -167,7 +221,7 @@ MonoBehaviour:
   speed: 8
   gravity: -9.81
   jumpHeight: 2
-  goal: RabbitHole
+  goal: 
   nextScene: MenuVR
 --- !u!114 &4621699890340798053
 MonoBehaviour:
