@@ -19,7 +19,10 @@ public class TextDialog2Opt2 : MonoBehaviour
 {
     
     private int act = 0;
-    public ActManagerScript NPC1;
+    private List<NpcDialogManager> npcsList = new List<NpcDialogManager>();
+
+    public NpcDialogManager NPC1;
+
 
 
     private bool selectUp, selectDown = false;
@@ -27,11 +30,16 @@ public class TextDialog2Opt2 : MonoBehaviour
 
     public void changeActTo(int nact) {
         this.act = nact;
+        foreach (NpcDialogManager manager in npcsList)
+        {
+            manager.enableDialogIndicator(true);
+        }
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        npcsList.Add(NPC1);
         
     }
 
@@ -66,11 +74,15 @@ public class TextDialog2Opt2 : MonoBehaviour
     void OnTriggerEnter(Collider collider)
     {
        // * Starts conversation for two NPCs 
- 
-        if(collider.gameObject.CompareTag(NPC1.tag))
+       
+        foreach (NpcDialogManager manager in npcsList)
         {
-            Debug.Log("npc-e act:"+act);
-            ConversationManager.Instance.StartConversation(NPC1.getConversation(act));
+            if(collider.gameObject.CompareTag(manager.tag))
+            {
+                Debug.Log("npc-e act:"+act);
+                manager.enableDialogIndicator(false);
+                ConversationManager.Instance.StartConversation(manager.getConversation(act));
+            }
         }
 
         // if(collider.gameObject.CompareTag(NPC2Tag))
@@ -83,10 +95,13 @@ public class TextDialog2Opt2 : MonoBehaviour
      {
        // * Ends conversation for two NPCs 
  
-        if(collider.gameObject.CompareTag(NPC1.tag)) // || collider.gameObject.CompareTag(NPC2Tag))
+        foreach (NpcDialogManager manager in npcsList)
         {
-            ConversationManager.Instance.EndConversation();
-            Debug.Log("npc-e fin nact:"+act);
+            if(collider.gameObject.CompareTag(manager.tag)) // || collider.gameObject.CompareTag(NPC2Tag))
+            {
+                ConversationManager.Instance.EndConversation();
+                Debug.Log("npc-e fin nact:"+act);
+            }
         }
      }
 }
