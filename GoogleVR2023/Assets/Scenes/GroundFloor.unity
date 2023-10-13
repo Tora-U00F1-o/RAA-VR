@@ -202,6 +202,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 0c70c53273ffbdd488464395777b376e, type: 2}
+    - target: {fileID: 6998972768659317205, guid: d079cd0e6137a44b58864c3a91ad119a, type: 3}
+      propertyPath: m_TagString
+      value: Cat
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d079cd0e6137a44b58864c3a91ad119a, type: 3}
 --- !u!1001 &91333961
@@ -313,10 +317,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentIDCounter: 7
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":21.3999939,"yPos":311},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"bien","parentUIDs":[1],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":316.4,"yPos":313},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"mal","parentUIDs":[1],"SpeechUID":-1}],"Parameters":[{"__type":"EditableIntParameter:#DialogueEditor","ParameterName":"New
-    int","IntValue":0}],"SpeechNodes":[{"Connections":[],"EditorInfo":{"isRoot":true,"xPos":156,"yPos":48},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"HOLA!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"NPC-E","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":153.4,"yPos":161},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Que
-    tal","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"NPC-E","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":145.4,"yPos":441},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"CEBOLLA","parentUIDs":[2,3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"NPC-E","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1}]}'
+  CurrentIDCounter: 10
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":58.3999939,"yPos":267},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"quitar","parentUIDs":[1],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":352.4,"yPos":269},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"mostrar","parentUIDs":[1],"SpeechUID":-1}],"Parameters":[{"__type":"EditableIntParameter:#DialogueEditor","ParameterName":"New
+    int","IntValue":0}],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":191,"yPos":4},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"HOLA!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"NPC-E","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":189.4,"yPos":117},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Que
+    tal","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"NPC-E","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":6.399994,"yPos":394},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"CEBOLLA","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"NPC-E","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":378,"yPos":399},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":null,"parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"NPC-E","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: NPC-E
   DefaultSprite: {fileID: 21300000, guid: 2c2a5be59b4a36648a911535c6e46ab8, type: 3}
@@ -327,23 +331,12 @@ MonoBehaviour:
   - {fileID: 606447951}
   - {fileID: 606447950}
   - {fileID: 606447949}
+  - {fileID: 606447954}
   ContinueFont: {fileID: 0}
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1810281198}
-        m_TargetAssemblyTypeName: TextDialog2Opt2, Assembly-CSharp
-        m_MethodName: changeActTo
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &227983734
 GameObject:
   m_ObjectHideFlags: 0
@@ -918,7 +911,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 422781080}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 21e4297a495f448429fee4571db7099d, type: 3}
   m_Name: 
@@ -954,6 +947,11 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 5
   m_Center: {x: 0, y: 0.78, z: 0}
+--- !u!4 &422781087 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2437060625171721727, guid: d079cd0e6137a44b58864c3a91ad119a, type: 3}
+  m_PrefabInstance: {fileID: 64162589}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &538859818
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1271,6 +1269,7 @@ GameObject:
   - component: {fileID: 606447951}
   - component: {fileID: 606447950}
   - component: {fileID: 606447949}
+  - component: {fileID: 606447954}
   m_Layer: 0
   m_Name: ConversationEventInfo
   m_TagString: Untagged
@@ -1306,19 +1305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1810281198}
-        m_TargetAssemblyTypeName: TextDialog2Opt2, Assembly-CSharp
-        m_MethodName: changeActTo
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   NodeID: 4
   TMPFont: {fileID: 0}
   Icon: {fileID: 21300000, guid: 2c2a5be59b4a36648a911535c6e46ab8, type: 3}
@@ -1395,14 +1382,14 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1810281198}
-        m_TargetAssemblyTypeName: TextDialog2Opt2, Assembly-CSharp
-        m_MethodName: changeActTo
-        m_Mode: 3
+      - m_Target: {fileID: 4511753732354812175}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1411,6 +1398,37 @@ MonoBehaviour:
   TMPFont: {fileID: 0}
   Icon: {fileID: 21300000, guid: 2c2a5be59b4a36648a911535c6e46ab8, type: 3}
   Audio: {fileID: 8300000, guid: 9cb0e89c93e5b7d4ca9dfcf3997ca0dd, type: 3}
+--- !u!114 &606447954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606447947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1810281198}
+        m_TargetAssemblyTypeName: TextDialog2Opt2, Assembly-CSharp
+        m_MethodName: changeActTo
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  NodeID: 9
+  TMPFont: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 2c2a5be59b4a36648a911535c6e46ab8, type: 3}
+  Audio: {fileID: 0}
 --- !u!4 &667182016 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4621699890340798055, guid: 2ff37b6c7b6554536a363ddc2b7a18aa, type: 3}
@@ -1565,6 +1583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tag: Cat
+  dialogIndicator: {fileID: 4511753732354812175}
   ActA: {fileID: 194710278}
   ActB: {fileID: 1586816305}
 --- !u!1 &857586118
@@ -3045,3 +3064,77 @@ PrefabInstance:
       objectReference: {fileID: 1059416260}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35d914d25d14e794aaafcfbf3137e833, type: 3}
+--- !u!1 &4511753732354812175 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6488589141418546111, guid: a8b991d3028a5f7448dcad7485616c9d, type: 3}
+  m_PrefabInstance: {fileID: 7246539670261643952}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7246539670261643952
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 422781087}
+    m_Modifications:
+    - target: {fileID: 5856871798574270725, guid: a8b991d3028a5f7448dcad7485616c9d, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5856871798574270725, guid: a8b991d3028a5f7448dcad7485616c9d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.23809524
+      objectReference: {fileID: 0}
+    - target: {fileID: 5856871798574270725, guid: a8b991d3028a5f7448dcad7485616c9d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.23809524
+      objectReference: {fileID: 0}
+    - target: {fileID: 5856871798574270725, guid: a8b991d3028a5f7448dcad7485616c9d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.23809524
+      objectReference: {fileID: 0}
+    - target: {fileID: 5856871798574270725, guid: a8b991d3028a5f7448dcad7485616c9d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5856871798574270725, guid: a8b991d3028a5f7448dcad7485616c9d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5856871798574270725, guid: a8b991d3028a5f7448dcad7485616c9d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5856871798574270725, guid: a8b991d3028a5f7448dcad7485616c9d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5856871798574270725, guid: a8b991d3028a5f7448dcad7485616c9d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5856871798574270725, guid: a8b991d3028a5f7448dcad7485616c9d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5856871798574270725, guid: a8b991d3028a5f7448dcad7485616c9d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5856871798574270725, guid: a8b991d3028a5f7448dcad7485616c9d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5856871798574270725, guid: a8b991d3028a5f7448dcad7485616c9d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5856871798574270725, guid: a8b991d3028a5f7448dcad7485616c9d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6488589141418546111, guid: a8b991d3028a5f7448dcad7485616c9d, type: 3}
+      propertyPath: m_Name
+      value: dialogueIndicator
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a8b991d3028a5f7448dcad7485616c9d, type: 3}

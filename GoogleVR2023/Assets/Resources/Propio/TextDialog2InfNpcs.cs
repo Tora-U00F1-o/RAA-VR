@@ -5,41 +5,31 @@ using DialogueEditor;
 using System.Configuration.Assemblies;
 
 /* IMPORTANT */
-// Use this version of TextDialogue only for conversations with a MAXIMUM OF TWO OPTIONS *responses
-// This Script is a component of the PLAYER
-// It includes two NPCs and conversations, adapt it to the number of NPCs and conversations in your scene.
-// Change: Class properties and methods OnTriggerEnter and OnTriggerExit.
+// Controla los actos de dialogos del juego
 
 ///--------------------------------
-///   Author: Victor Alvarez, Ph.D.
-///   University of Oviedo, Spain
+///   Author: Jorge Toraño
 ///--------------------------------
 
-public class TextDialog2Opt2 : MonoBehaviour
+public class TextDialog2InfNpcs : MonoBehaviour
 {
     
     private int act = 0;
     private List<NpcDialogManager> npcsList = new List<NpcDialogManager>();
 
     public NpcDialogManager NPC1;
+    public NpcDialogManager NPC2;
 
 
 
     private bool selectUp, selectDown = false;
     private float verticalAxis;
 
-    public void changeActTo(int nact) {
-        this.act = nact;
-        foreach (NpcDialogManager manager in npcsList)
-        {
-            manager.enableDialogIndicator(true);
-        }
-    }
-
     // Start is called before the first frame update
     void Start()
     {
         npcsList.Add(NPC1);
+        npcsList.Add(NPC2);
         
     }
 
@@ -104,4 +94,12 @@ public class TextDialog2Opt2 : MonoBehaviour
             }
         }
      }
+
+     public void changeActTo(int nact) {
+        this.act = nact;
+        foreach (NpcDialogManager manager in npcsList)
+        {
+            manager.enableDialogIndicator(true);
+        }
+    }
 }
