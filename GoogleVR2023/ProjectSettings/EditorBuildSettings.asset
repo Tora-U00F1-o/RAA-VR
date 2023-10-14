@@ -8,8 +8,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MenuVR.unity
     guid: c72266273b87f47498eea4d48bb02c61
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GroundFloor.unity
     guid: dc2a9d47942e5644493a9bb27ec64dfe
+  - enabled: 1
+    path: Assets/Scenes/Eii.unity
+    guid: adbb74f42b86df0458fb89e30f3a02ec
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: c8face35e7cb33446b76821934b7928c, type: 2}
