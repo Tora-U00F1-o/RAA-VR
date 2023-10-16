@@ -11,6 +11,9 @@ TagManager:
   - NPC-E
   - NPC-D
   - NPC-A
+  - PosOrla
+  - PosOrlaEscondida
+  - Fregado
   layers:
   - Default
   - TransparentFX

@@ -69,6 +69,6 @@ public class NpcFollowPlayer : MonoBehaviour
     {
         // Aquí puedes definir la acción que quieres que realice el NPC
         // Por ejemplo, si quieres que el NPC muestre un mensaje, podrías hacer algo como:
-        Debug.Log("El NPC realiza una acción.");
+        // Debug.Log("El NPC-A Pide que le esperes.");
     }
 }

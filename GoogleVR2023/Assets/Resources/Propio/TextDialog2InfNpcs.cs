@@ -15,7 +15,7 @@ public class TextDialog2InfNpcs : MonoBehaviour
 {
     
     private int act = 0;
-    private List<NpcDialogManager> npcsList = new List<NpcDialogManager>();
+    private List<NpcDialogManager> npcsList;
 
     public NpcDialogManager NPC1;
     public NpcDialogManager NPC2;
@@ -28,6 +28,7 @@ public class TextDialog2InfNpcs : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        npcsList = new List<NpcDialogManager>();
         npcsList.Add(NPC1);
         npcsList.Add(NPC2);
         

@@ -9,18 +9,16 @@ public class NpcDialogManager : MonoBehaviour
     public string tag;
     public GameObject  dialogIndicator;
     public NPCConversation ActA;
-    public NPCConversation ActB = null;
+    public NPCConversation ActB;
     
     public NPCConversation getConversation(int act) {
-        NPCConversation conv = null;
         if(act == 0) {
-            conv =  ActA;
+            return  ActA;
+        } else if(act == 1) {
+            return  ActB;
+        } else {
+            return ActA;
         } 
-        if(act == 1) {
-            conv =  ActB;
-        } 
-        
-        return conv == null ? ActA : conv;
     }
 
     
