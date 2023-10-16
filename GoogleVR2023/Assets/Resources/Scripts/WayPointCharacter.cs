@@ -8,7 +8,6 @@ public class WayPointCharacter : MonoBehaviour
     public Transform target;
     public float speed = 1.0f;
     
-    public Transform player;
 
     
     float gravity = -9.81f;

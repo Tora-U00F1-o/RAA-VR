@@ -8,6 +8,9 @@ TagManager:
   - Cat
   - Goal
   - NPC-P
+  - NPC-E
+  - NPC-D
+  - NPC-A
   layers:
   - Default
   - TransparentFX
