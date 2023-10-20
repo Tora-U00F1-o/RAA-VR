@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf9ea578419e994cbc222e78b6e390f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: GroundFloor
+  nextScene: Eii
   timerDuration: 3
 --- !u!4 &94195481
 Transform:
