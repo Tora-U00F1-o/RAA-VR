@@ -44,15 +44,6 @@ public class WayPointCharacter : MonoBehaviour
         {
             target = hit.gameObject.GetComponent<WayPoint>().nextWayPoint;
         }
-       
-       /* Cinematicas
-        if (hit.gameObject.CompareTag("FinalWayPoint"))
-        {
-            Debug.Log("Colision con finalwaypoint");
-            animator.SetTrigger("Attack");
-            stopCharacter = true;
-        }
-        */
     }
 
 
