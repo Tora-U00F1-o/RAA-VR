@@ -9,6 +9,10 @@ public class LookToPlayer : MonoBehaviour
     public float rotationSpeed = 2.0f; // Velocidad de rotación del NPC
     private Animator animator;
 
+    private bool isPlayerClose = false;
+    private float timeToWait = 2f; // Tiempo que espera (2 segundos)
+    private float referenceTime;
+
     void Start()
     {
        animator = character.GetComponent <Animator>(); 
@@ -19,6 +23,13 @@ public class LookToPlayer : MonoBehaviour
 
         if (animator.GetBool("Player_close")) 
         {
+            // si ya se alejó espera "timeToWait" segundos para cambiar de animacion
+            if(!isPlayerClose) {
+                if(Time.time - referenceTime >= timeToWait) {
+                    animator.SetBool("Player_close", false);
+                }
+            }
+
             LookAtTarget(player.position);
         }
     }
@@ -41,6 +52,7 @@ public class LookToPlayer : MonoBehaviour
         if (other.transform == player)
         {
             animator.SetBool("Player_close", true);
+            isPlayerClose = true;
         }
         
     }
@@ -48,8 +60,8 @@ public class LookToPlayer : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         if (other.transform == player)
-        {
-            animator.SetBool("Player_close", false);
+        {referenceTime = Time.time;
+            isPlayerClose = false;
         }
     }
 }

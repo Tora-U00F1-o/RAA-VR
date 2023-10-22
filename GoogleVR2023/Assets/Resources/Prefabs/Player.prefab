@@ -108,6 +108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4621699890340798055}
   - component: {fileID: 4621699890340798054}
+  - component: {fileID: 1400695254095184064}
   - component: {fileID: 5203491072789799927}
   - component: {fileID: 6265448107523527704}
   - component: {fileID: 6550371898248771201}
@@ -154,6 +155,23 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1400695254095184064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4621699890340798049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8cf078373f290b4492f48a1f1022c0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  act: {fileID: 0}
+  NPC_E: {fileID: 0}
+  NPC_D: {fileID: 0}
+  NPC_A: {fileID: 0}
+  NPC_P: {fileID: 0}
 --- !u!114 &5203491072789799927
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,11 +184,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe943c5273c51864c8b209b18e570bed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NPC1Tag: 
-  NPC2Tag: 
-  NPC1Conversation: {fileID: 0}
-  NPC2Conversation: {fileID: 0}
   NPC1: {fileID: 0}
+  NPC2: {fileID: 0}
 --- !u!114 &6265448107523527704
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ public class NpcFollowPlayer : MonoBehaviour
     public float actionRepeatInterval = 10.0f; // Intervalo de tiempo para repetir la acción si el jugador no se acerca
 
     private bool isFollowing = false;
+    public bool hasToFollow = true;
     private float timeSinceLastAction = 0f;
 
     private Animator animator;
@@ -61,7 +62,6 @@ public class NpcFollowPlayer : MonoBehaviour
     void StopFollowing()
     {
         animator.SetBool("Caminando", false);
-        // Aquí puedes agregar cualquier lógica adicional cuando el NPC se detiene
         PerformAction();
     }
 

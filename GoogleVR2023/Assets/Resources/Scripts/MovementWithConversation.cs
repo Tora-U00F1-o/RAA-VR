@@ -57,7 +57,6 @@ public class MovementWithConversation : MonoBehaviour
     {
         if (hit.gameObject.CompareTag(goal))
         {
-            Debug.Log("I'm Late & Down the Rabbit Hole");
             SceneManager.LoadScene(nextScene);
         }        
     }
