@@ -99,6 +99,7 @@ public class ActManager : MonoBehaviour
             return;
         }
         if(actNumber == 3 && collider.gameObject.CompareTag("PosOrlaEscondida")) {
+            
             nextAct();
             return;
         }

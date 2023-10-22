@@ -109,10 +109,7 @@ GameObject:
   - component: {fileID: 4621699890340798055}
   - component: {fileID: 4621699890340798054}
   - component: {fileID: 1400695254095184064}
-  - component: {fileID: 5203491072789799927}
-  - component: {fileID: 6265448107523527704}
   - component: {fileID: 6550371898248771201}
-  - component: {fileID: 4621699890340798052}
   - component: {fileID: 4621699890340798053}
   - component: {fileID: 4621699890340798074}
   m_Layer: 0
@@ -167,41 +164,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8cf078373f290b4492f48a1f1022c0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  actNumber: 0
   act: {fileID: 0}
   NPC_E: {fileID: 0}
   NPC_D: {fileID: 0}
   NPC_A: {fileID: 0}
   NPC_P: {fileID: 0}
---- !u!114 &5203491072789799927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4621699890340798049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe943c5273c51864c8b209b18e570bed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NPC1: {fileID: 0}
-  NPC2: {fileID: 0}
---- !u!114 &6265448107523527704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4621699890340798049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 203a011f47ccc014abff173435a0b4e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NPC1Tag: 
-  NPC2Tag: 
-  NPC1Conversation: {fileID: 0}
-  NPC2Conversation: {fileID: 0}
+  PensamFregado: {fileID: 0}
+  PensamOrlaPerdida: {fileID: 0}
 --- !u!114 &6550371898248771201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,24 +182,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 43e50f0783cbf2a48a8b7a0730afcdf7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 4621699890340798054}
-  speed: 8
-  gravity: -9.81
-  jumpHeight: 2
-  goal: 
-  nextScene: MenuVR
---- !u!114 &4621699890340798052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4621699890340798049}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0c33603cbff14d56be2261488b8f745, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 4621699890340798054}
