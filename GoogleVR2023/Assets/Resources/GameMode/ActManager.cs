@@ -14,7 +14,7 @@ using System.Configuration.Assemblies;
 public class ActManager : MonoBehaviour
 {
     
-    private int actNumber = 0;
+    public int actNumber = 0;
     public ActController act;
     private List<NpcDialogManager> npcsList;
 
@@ -22,6 +22,8 @@ public class ActManager : MonoBehaviour
     public NpcDialogManager NPC_D;
     public NpcDialogManager NPC_A;
     public NpcDialogManager NPC_P;
+    public NPCConversation PensamFregado;
+    public NPCConversation PensamOrlaPerdida;
     
 
     private bool selectUp, selectDown = false;
@@ -85,8 +87,15 @@ public class ActManager : MonoBehaviour
                 return;
             }
         }
+        if(collider.gameObject.CompareTag("Fregado")){
+            ConversationManager.Instance.StartConversation(PensamFregado);
+            return;
+        }
+
+
         if(actNumber == 0 && collider.gameObject.CompareTag("PosOrla")) {
             nextAct();
+            ConversationManager.Instance.StartConversation(PensamOrlaPerdida);
             return;
         }
         if(actNumber == 3 && collider.gameObject.CompareTag("PosOrlaEscondida")) {
@@ -98,14 +107,22 @@ public class ActManager : MonoBehaviour
 
      void OnTriggerExit (Collider collider)
      {
-       // * Ends conversation for two NPCs 
- 
         foreach (NpcDialogManager manager in npcsList)
         {
             if(collider.gameObject.CompareTag(manager.tag)) 
             {
                 ConversationManager.Instance.EndConversation();
+                return;
             }
+        }
+
+        if(collider.gameObject.CompareTag("Fregado")){
+            ConversationManager.Instance.EndConversation();
+            return;
+        }
+        if(collider.gameObject.CompareTag("PosOrla")) {
+            ConversationManager.Instance.EndConversation();
+            return;
         }
      }
 

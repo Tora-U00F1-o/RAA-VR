@@ -1,17 +1,17 @@
 using System.Collections;
 using UnityEngine;
+using DialogueEditor;
 
 public class NpcFollowPlayer : MonoBehaviour
 {
     public Transform character;
     public Transform player; // Referencia al jugador
-    public float followDistance = 5.0f; // Distancia a la que el NPC comenzará a seguir al jugador
-    public float stopDistance = 1.0f; // Distancia a la que el NPC se detendrá antes de alcanzar al jugador
-    public float actionRepeatInterval = 10.0f; // Intervalo de tiempo para repetir la acción si el jugador no se acerca
+    public float followDistance = 7.0f; // Distancia a la que el NPC comenzará a seguir al jugador
+    public float stopDistance = 3.0f; // Distancia a la que el NPC se detendrá antes de alcanzar al jugador
+
+    public NPCConversation conversacionAlAlejarse;
 
     private bool isFollowing = false;
-    public bool hasToFollow = true;
-    private float timeSinceLastAction = 0f;
 
     private Animator animator;
 
@@ -36,23 +36,22 @@ public class NpcFollowPlayer : MonoBehaviour
             isFollowing = false;
             StopFollowing();
         }
-        // Si el jugador está a una distancia mayor que 'followDistance', el NPC se detiene y realiza una acción
+        // Si el jugador está a una distancia mayor que 'followDistance', el NPC se detiene
         else if (distanceToPlayer >= followDistance)
         {
             isFollowing = false;
             StopFollowing();
-            timeSinceLastAction += Time.deltaTime;
             
-            if(timeSinceLastAction >= actionRepeatInterval)
-            {
-                PerformAction();
-                timeSinceLastAction = 0f;
-            }
         }
     }
 
     void FollowPlayer()
     {
+        if( player.GetComponent<ActManager>().actNumber != 0) {
+            isFollowing = false;
+            return;
+        }
+
         animator.SetBool("Caminando", true);
         Vector3 targetPosition = new Vector3(player.position.x, transform.position.y, player.position.z);
         transform.LookAt(targetPosition);
@@ -62,13 +61,6 @@ public class NpcFollowPlayer : MonoBehaviour
     void StopFollowing()
     {
         animator.SetBool("Caminando", false);
-        PerformAction();
     }
 
-    void PerformAction()
-    {
-        // Aquí puedes definir la acción que quieres que realice el NPC
-        // Por ejemplo, si quieres que el NPC muestre un mensaje, podrías hacer algo como:
-        // Debug.Log("El NPC-A Pide que le esperes.");
-    }
 }

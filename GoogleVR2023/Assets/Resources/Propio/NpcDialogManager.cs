@@ -8,7 +8,7 @@ public class NpcDialogManager : MonoBehaviour
 
     public string tag;
     public GameObject  dialogIndicator;
-    public NPCConversation ActA;
+    public NPCConversation ActA; 
     public NPCConversation ActB;
     public NPCConversation ActC;
     public NPCConversation ActD;
@@ -32,6 +32,8 @@ public class NpcDialogManager : MonoBehaviour
 
     
     public void enableDialogIndicator(bool isOn) {
-        dialogIndicator.SetActive(isOn);
+        if(dialogIndicator != null) {
+            dialogIndicator.SetActive(isOn);
+        }
     }
 }

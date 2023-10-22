@@ -60,7 +60,8 @@ public class LookToPlayer : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         if (other.transform == player)
-        {referenceTime = Time.time;
+        {
+            referenceTime = Time.time;
             isPlayerClose = false;
         }
     }
